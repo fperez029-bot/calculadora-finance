@@ -1,0 +1,100 @@
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #dceada; /* Fondo verdoso tenue */
+    color: #333333;
+}
+
+/* Navbar personalizado */
+.navbar-custom {
+    background-color: #3f4e65; /* Azul grisáceo oscuro del encabezado */
+    padding: 0.8rem 1.5rem;
+}
+
+.navbar-custom .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.25rem;
+}
+
+.navbar-custom .nav-link {
+    color: #c9d6df;
+    font-weight: 600;
+    margin-left: 1rem;
+}
+
+.navbar-custom .nav-link:hover,
+.navbar-custom .nav-link.active {
+    color: #ffffff;
+}
+
+/* Offcanvas móvil */
+.offcanvas {
+    background-color: #e9f3ec; /* Fondo claro del panel lateral */
+}
+
+.offcanvas-header {
+    background-color: #e9f3ec;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.offcanvas-title {
+    font-weight: 700;
+    color: #2b3a4a;
+}
+
+.offcanvas-body .nav-link {
+    color: #2b3a4a;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 0.75rem 0;
+}
+
+/* Tarjeta principal de la calculadora */
+.calculator-card {
+    background-color: #e3ebd9; /* Fondo suave del contenedor de la calculadora */
+    border: 2px solid #2b3a4a;
+    border-radius: 18px;
+    max-width: 900px;
+}
+
+.calculator-card .title {
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: #2b3a4a;
+}
+
+.calculator-card .subtitle {
+    font-size: 1rem;
+    color: #2b3a4a;
+}
+
+.calculator-card .subtitle-description {
+    font-size: 0.9rem;
+}
+
+/* Campos de entrada */
+.form-control {
+    border: 1.5px solid #a8c3b4;
+    border-radius: 8px;
+    background-color: #ffffff;
+    padding: 0.6rem 0.8rem;
+}
+
+.form-control:focus {
+    border-color: #2b3a4a;
+    box-shadow: none;
+}
+
+/* Botón principal */
+.btn-calc {
+    background-color: #e09f58; /* Tono anaranjado del botón */
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-calc:hover {
+    background-color: #cc8b45;
+    color: #ffffff;
+}
