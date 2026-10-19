@@ -1,0 +1,231 @@
+:root {
+    --color-primary: #3f4e65;   /* Azul obscuro institucional */
+    --color-needs: #2b3a4a;     /* 50% - Azul Oscuro */
+    --color-wants: #2DCCCD;     /* 30% - Aqua/Turquesa */
+    --color-savings: #e09f58;   /* 20% - Naranja/Dorado */
+    
+    --color-bg: #40bfa1;         /* Verde aqua base (pantalla grande) */
+    --color-text: #121212;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--color-bg);
+    color: var(--color-text);
+    display: flex;
+    flex-direction: column;
+    padding-top: 80px;
+    min-height: 100vh;
+    transition: background-color 0.3s ease;
+}
+
+/* NAVBAR Y OFFCANVAS */
+.navbar-custom {
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.offcanvas {
+    background-color: var(--color-primary);
+    color: white;
+}
+
+.offcanvas-header {
+    background-color: #2b3a4a;
+    color: white;
+    border-bottom: 1px solid #4f5e75;
+}
+
+.offcanvas-title {
+    color: white;
+}
+
+/* TARJETA PRINCIPAL */
+.calculator-card {
+    background-color: #f7f9f6;
+    border-radius: 20px;
+    padding: 40px;
+    border: none;
+}
+
+.main-title {
+    color: #1e293b;
+    font-weight: 700;
+}
+
+/* BOTÓN DE CALCULAR */
+.btn-calculate {
+    background-color: #e09f58;
+    color: #ffffff;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-calculate:hover {
+    background-color: #cc8b45;
+    color: #ffffff;
+    transform: scale(1.02);
+}
+
+/* RESULTADOS (TARJETAS) */
+.result-card {
+    border: none;
+    background-color: #ffffff;
+    border-radius: 15px;
+    transition: transform 0.3s;
+}
+
+.result-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+/* Bordes superiores de colores */
+.border-needs { border-top: 5px solid var(--color-needs); }
+.border-wants { border-top: 5px solid var(--color-wants); }
+.border-savings { border-top: 5px solid var(--color-savings); }
+
+/* Textos de colores */
+.text-needs { color: var(--color-needs); }
+.text-wants { color: var(--color-wants); }
+.text-savings { color: #d08230; }
+
+/* Círculos de iconos */
+.icon-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+}
+
+.bg-needs { background-color: var(--color-needs); }
+.bg-wants { background-color: var(--color-wants); }
+.bg-savings { background-color: var(--color-savings); }
+
+/* GRÁFICO DE DONA */
+.chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pie-chart {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color-needs) 0% 50%,
+        var(--color-wants) 50% 80%,
+        var(--color-savings) 80% 100%
+    );
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    position: relative;
+}
+
+.pie-chart::after {
+    content: "FINANCE";
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120px; height: 120px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+/* FOOTER */
+#main-footer {
+    background: var(--color-primary);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#autor {
+    margin: 0.2rem;
+    color: white;
+    font-weight: 600;
+}
+
+.social {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 0.8rem;
+}
+
+.social a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background: #ffffff;
+    color: var(--color-primary);
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.animate-fade-in {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================
+   MEDIA QUERIES DE ADAPTABILIDAD RESPONSIVE
+   (Generan el cambio de fondo según la pantalla)
+   ========================================== */
+
+/* PANTALLA EXTRAGRANDE (Escritorio / Laptop) - Verde Aqua */
+@media (min-width: 901px) {
+    body {
+        background-color: #40bfa1;
+    }
+}
+
+/* PANTALLA GRANDE (Tablet horizontal / Pantalla mediana) - Verde Turquesa tenue */
+@media (max-width: 900px) and (min-width: 701px) {
+    body {
+        background-color: #58b8aa;
+    }
+}
+
+/* PANTALLA MEDIANA (Móvil vertical grande / Tablet estrecha) - Rosado / Rosa Pastel */
+@media (max-width: 700px) and (min-width: 401px) {
+    body {
+        background-color: #e8a2ca;
+    }
+}
+
+/* PANTALLA PEQUEÑA (Móvil estricto) - Azul Aqua Claro */
+@media (max-width: 400px) {
+    body {
+        background-color: #61cbd1;
+    }
+}
